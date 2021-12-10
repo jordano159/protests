@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  location: MyString
+  contact_organization: MyString
+  contact_name: MyString
+  contact_phone: MyString
+  present: 1
+  num_in_series: MyString
+  is_repeated: false
+  type: 
+
+two:
+  description: MyText
+  location: MyString
+  contact_organization: MyString
+  contact_name: MyString
+  contact_phone: MyString
+  present: 1
+  num_in_series: MyString
+  is_repeated: false
+  type: 
