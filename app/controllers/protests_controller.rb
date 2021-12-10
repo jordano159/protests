@@ -60,6 +60,6 @@ class ProtestsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def protest_params
-      params.require(:protest).permit(:description, :location, :contact_organization, :contact_name, :contact_phone, :present, :num_in_series, :is_repeated, :kind)
+      params.require(:protest).permit(:description, :location, :contact_organization, :contact_name, :contact_phone, :present, :num_in_series, :is_repeated, :kind, images: [])
     end
 end

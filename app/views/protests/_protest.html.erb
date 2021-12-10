@@ -1,6 +1,10 @@
 <div id="<%= dom_id protest %>" class="card text-center shadow-2xl w-50">
   <figure class="px-10 pt-10">
-    <img src="https://picsum.photos/id/1005/400/250" class="rounded-xl">
+    <% if protest.images.first&.representable? %>
+      <%= image_tag protest.images.first.variant(resize_to_limit: [500, 500]) %>
+    <% else %>
+      <img src="https://picsum.photos/id/1005/400/250" class="rounded-xl">
+    <% end %>
   </figure>
   <div class="card-body">
   <h2 class="card-title"><%= protest.description %></h2> 
