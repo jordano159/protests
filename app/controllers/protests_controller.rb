@@ -6,10 +6,6 @@ class ProtestsController < ApplicationController
     @protests = Protest.all
   end
 
-  # GET /protests/1 or /protests/1.json
-  def show
-  end
-
   # GET /protests/new
   def new
     @protest = Protest.new
@@ -25,7 +21,7 @@ class ProtestsController < ApplicationController
 
     respond_to do |format|
       if @protest.save
-        format.html { redirect_to @protest, notice: "Protest was successfully created." }
+        format.html { redirect_to protests_path, notice: "Protest was successfully created." }
         format.json { render :show, status: :created, location: @protest }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +34,7 @@ class ProtestsController < ApplicationController
   def update
     respond_to do |format|
       if @protest.update(protest_params)
-        format.html { redirect_to @protest, notice: "Protest was successfully updated." }
+        format.html { redirect_to protests_path, notice: "Protest was successfully updated." }
         format.json { render :show, status: :ok, location: @protest }
       else
         format.html { render :edit, status: :unprocessable_entity }
