@@ -75,5 +75,3 @@ group :test do
 end
 
 gem "aws-sdk-s3", require: false
-
-gem "ruby-vips", "~> 2.1"
