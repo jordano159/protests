@@ -7,54 +7,24 @@
     <% end %>
   </figure>
   <div class="card-body">
-  <h2 class="card-title"><%= protest.description %></h2> 
+    <h2 class="card-title"><%= protest.description %></h2> 
 
-
-    <p class="my-5">
-      <strong class="block font-medium mb-1">Location:</strong>
-      <%= protest.location %>
-    </p>
-
-    <p class="my-5">
-      <strong class="block font-medium mb-1">Contact organization:</strong>
-      <%= protest.contact_organization %>
-    </p>
-
-    <p class="my-5">
-      <strong class="block font-medium mb-1">Contact name:</strong>
-      <%= protest.contact_name %>
-    </p>
-
-    <p class="my-5">
-      <strong class="block font-medium mb-1">Contact phone:</strong>
-      <%= protest.contact_phone %>
-    </p>
-
-    <p class="my-5">
-      <strong class="block font-medium mb-1">Present:</strong>
-      <%= protest.present %>
-    </p>
-
-    <p class="my-5">
-      <strong class="block font-medium mb-1">Num in series:</strong>
-      <%= protest.num_in_series %>
-    </p>
-
-    <p class="my-5">
-      <strong class="block font-medium mb-1">Is repeated:</strong>
-      <%= protest.is_repeated %>
-    </p>
-
-    <p class="my-5">
-      <strong class="block font-medium mb-1">סוג הפגנה:</strong>
-      <%= protest.kind %>
-    </p>
+    <div class="card-text my-5"><%= protest.location %></div>
+    <% if protest.is_repeated %>
+      <div class="card-text my-5">אירוע מספר <%= protest.num_in_series %></div>
+    <% end %>
+    <div class="card-text my-5"><%= protest.kind %></div>
+    <div class="card-text my-5"><%= protest.present %> השתתפו</div>
+    <div class="card-text my-5">
+      <div><%= protest.contact_name %></div>
+      <div><%= protest.contact_phone %></div>
+      <div><%= protest.contact_organization %></div>
+    </div>
 
   <% if action_name != "show" %>
     <div class="justify-center card-actions">
-      <button class="btn btn-outline btn-accent">More info</button>
-      <%= link_to "Show this protest", protest, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-      <%= link_to 'Edit this protest', edit_protest_path(protest), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+      <%= link_to "מידע נוסף", protest, class: "btn btn-primary" %>
+      <%= link_to 'עריכה', edit_protest_path(protest), class: "btn btn-ghost" %>
     </div>
   <% end %>
   </div>
