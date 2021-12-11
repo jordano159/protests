@@ -3,7 +3,7 @@ class ProtestsController < ApplicationController
 
   # GET /protests or /protests.json
   def index
-    @protests = Protest.all
+    @protests = Protest.all.order(created_at: :desc)
   end
 
   # GET /protests/new
