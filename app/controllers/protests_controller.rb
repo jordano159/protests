@@ -21,7 +21,7 @@ class ProtestsController < ApplicationController
 
     respond_to do |format|
       if @protest.save
-        format.html { redirect_to protests_path, notice: "Protest was successfully created." }
+        format.html { redirect_to protests_path, notice: "המחאה נוצרה בהצלחה." }
         format.json { render :show, status: :created, location: @protest }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -34,7 +34,7 @@ class ProtestsController < ApplicationController
   def update
     respond_to do |format|
       if @protest.update(protest_params)
-        format.html { redirect_to protests_path, notice: "Protest was successfully updated." }
+        format.html { redirect_to protests_path, notice: "המחאה עודכנה בהצלחה." }
         format.json { render :show, status: :ok, location: @protest }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -47,7 +47,7 @@ class ProtestsController < ApplicationController
   def destroy
     @protest.destroy
     respond_to do |format|
-      format.html { redirect_to protests_url, notice: "Protest was successfully destroyed." }
+      format.html { redirect_to protests_url, notice: "המחאה נמחקה בהצלחה." }
       format.json { head :no_content }
     end
   end
