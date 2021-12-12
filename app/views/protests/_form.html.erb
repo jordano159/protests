@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="my-5">
-    <%= form.label :description, "תיאור המחאה" %>
+    <%= form.label :description, "*תיאור המחאה" %>
     <%= form.text_area :description, rows: 4, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", required: true %>
   </div>
 
   <div class="my-5">
     <%= form.label :images, "תמונות מהמחאה" %>
-    <%= form.file_field :images, multiple: true, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full", required: true %>
+    <%= form.file_field :images, multiple: true, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="my-5">
@@ -57,8 +57,8 @@
   </div>
 
   <div class="my-5">
-    <%= form.label :type, "סוג מחאה" %>
-    <%= form.text_field :type, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.label :kind, "סוג מחאה" %>
+    <%= form.text_field :kind, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="inline">
