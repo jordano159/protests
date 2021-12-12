@@ -7,7 +7,7 @@
     <% end %>
   </figure>
   <div class="card-body">
-    <h2 class="card-title"><%= protest.description %></h2> 
+    <h2 class="card-title"><%= protest.description.truncate(50) %></h2> 
 
     
     <% if protest.location %><div class="card-text my-2"><%= protest.location %></div><% end %>
