@@ -1,5 +1,6 @@
 class ProtestsController < ApplicationController
   before_action :set_protest, only: %i[ show edit update destroy ]
+  before_action :authenticate_admin!, only: [:edit, :update, :destroy]
 
   # GET /protests or /protests.json
   def index

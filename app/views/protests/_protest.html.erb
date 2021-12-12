@@ -28,7 +28,7 @@
   <% if action_name != "show" %>
     <div class="justify-center card-actions">
       <%= link_to "מידע נוסף", protest, class: "btn btn-primary" %>
-      <%= link_to 'עריכה', edit_protest_path(protest), class: "btn btn-ghost" %>
+      <%= link_to 'עריכה', edit_protest_path(protest), class: "btn btn-ghost" if admin_signed_in? %>
     </div>
   <% end %>
   </div>
