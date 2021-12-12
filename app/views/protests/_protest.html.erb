@@ -11,16 +11,19 @@
 
     
     <% if protest.location %><div class="card-text my-2"><%= protest.location %></div><% end %>
-    <% if protest.is_repeated %>
-      <div class="card-text my-2">אירוע מספר <%= protest.num_in_series %></div>
+    <% if action_name == "show" %>
+      <% if protest.date %><div class="card-text my-2"><%= protest.date %></div><% end %>
+      <% if protest.is_repeated %>
+        <div class="card-text my-2">אירוע מספר <%= protest.num_in_series %></div>
+      <% end %>
+      <% if protest.kind %><div class="card-text my-2"><%= protest.kind %></div><% end %>
+      <% if protest.present %><div class="card-text my-2"><%= protest.present %> השתתפו</div><% end %>
+      <div class="card-text my-2">
+        <div><%= protest.contact_name %></div>
+        <div><%= protest.contact_phone %></div>
+        <div><%= protest.contact_organization %></div>
+      </div>
     <% end %>
-    <% if protest.kind %><div class="card-text my-2"><%= protest.kind %></div><% end %>
-    <% if protest.present %><div class="card-text my-2"><%= protest.present %> השתתפו</div><% end %>
-    <div class="card-text my-2">
-      <div><%= protest.contact_name %></div>
-      <div><%= protest.contact_phone %></div>
-      <div><%= protest.contact_organization %></div>
-    </div>
 
   <% if action_name != "show" %>
     <div class="justify-center card-actions">
