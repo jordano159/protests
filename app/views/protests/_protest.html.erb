@@ -9,13 +9,14 @@
   <div class="card-body">
     <h2 class="card-title"><%= protest.description %></h2> 
 
-    <div class="card-text my-5"><%= protest.location %></div>
+    
+    <% if protest.location %><div class="card-text my-2"><%= protest.location %></div><% end %>
     <% if protest.is_repeated %>
-      <div class="card-text my-5">אירוע מספר <%= protest.num_in_series %></div>
+      <div class="card-text my-2">אירוע מספר <%= protest.num_in_series %></div>
     <% end %>
-    <div class="card-text my-5"><%= protest.kind %></div>
-    <div class="card-text my-5"><%= protest.present %> השתתפו</div>
-    <div class="card-text my-5">
+    <% if protest.kind %><div class="card-text my-2"><%= protest.kind %></div><% end %>
+    <% if protest.present %><div class="card-text my-2"><%= protest.present %> השתתפו</div><% end %>
+    <div class="card-text my-2">
       <div><%= protest.contact_name %></div>
       <div><%= protest.contact_phone %></div>
       <div><%= protest.contact_organization %></div>
