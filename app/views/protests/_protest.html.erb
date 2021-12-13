@@ -12,7 +12,7 @@
     
     <% if protest.location %><div class="card-text my-2"><%= protest.location %></div><% end %>
     <% if action_name == "show" %>
-      <% if protest.date %><div class="card-text my-2"><%= protest.date %></div><% end %>
+      <% if protest.date %><div class="card-text my-2"><%= protest.date.strftime("%d/%m/%Y") %></div><% end %>
       <% if protest.is_repeated %>
         <div class="card-text my-2">אירוע מספר <%= protest.num_in_series %></div>
       <% end %>
