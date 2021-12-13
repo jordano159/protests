@@ -17,3 +17,27 @@
 * {
     font-family: 'Rubik', sans-serif;
 }
+/* -----
+SVG Icons - svgicons.sparkk.fr
+----- */
+
+.svg-icon {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.svg-lg {
+  width: 5em;
+  height: 5em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #ffffff;
+}
+
+.svg-icon circle {
+  stroke: #ffffff;
+  stroke-width: 1;
+}
